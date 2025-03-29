@@ -96,13 +96,3 @@ Want to improve this project?
 4️⃣ Submit a pull request
 
 🙌 **Happy Coding! 🚀**
-
-
-
-Create a new branch
-
-Make your changes
-
-Submit a pull request
-
-🙌 Happy Coding! 🚀
