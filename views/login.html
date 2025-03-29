@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Login to Your Account</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section class="login-container">
+        <form id="loginForm">
+            <label for="user_name">Username/Email:</label>
+            <input type="text" id="User_Name_Email" placeholder="Enter your username or email" required>
+
+
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit" id="submit" class="btn">Login</button>
+            <p>Don't have an account? <a href="./Sign_up.html">Sign up</a></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <script src="Login.js"></script>
+</body>
+</html>
