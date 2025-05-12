@@ -23,39 +23,49 @@ This project includes **user registration, login, token-based authentication, an
 
 ---
 
-## 🚀 Installation & Setup  
+# Auth-User-Dashboard
 
-### **1️⃣ Clone the repository**  
+## 🚀 Installation & Setup
+
+### 1️⃣ Clone the repository
+
 ```sh
-git clone https://github.com/your-username/Auth-User-Dashboard.git
+git clone https://github.com/Raiplus/Auth-User-Dashboard.git
 cd Auth-User-Dashboard
-2️⃣ Install dependencies
-sh
-Copy
-Edit
-npm install
-3️⃣ Set up environment variables
-Create a .env file in the root directory and add:
+```
 
-env
-Copy
-Edit
+### 2️⃣ Install dependencies
+
+```sh
+npm install
+```
+
+### 3️⃣ Set up environment variables
+
+Create a `.env` file in the root directory and add:
+
+```env
 MONGO_URI=mongodb://localhost:27017/auth-dashboard
 PORT=3000
-4️⃣ Run the application
-sh
-Copy
-Edit
+```
+
+### 4️⃣ Run the application
+
+```sh
 npm start
-5️⃣ Open in browser
-arduino
-Copy
-Edit
+```
+
+### 5️⃣ Open in browser
+
+```sh
 http://localhost:3000
-📂 Folder Structure
-php
-Copy
-Edit
+```
+
+---
+
+## 📂 Folder Structure
+
+```sh
 📦 Auth-User-Dashboard  
 ├── 📂 views/               # EJS Views (Frontend Templates)  
 │   ├── index.html          # Landing Page  
@@ -69,28 +79,22 @@ Edit
 ├── main.js                 # Main Backend File  
 ├── package.json            # Project Configuration  
 ├── README.md               # Project Documentation  
-🔗 Deployment
-Deploy to Render
-1️⃣ Push your code to GitHub.
-2️⃣ Sign in to Render.
-3️⃣ Connect your GitHub repo and deploy the service.
-4️⃣ Set environment variables (MONGO_URI, PORT).
-5️⃣ Access your live site!
+```
 
-📌 Live Demo: [Your Render URL]
+## 📜 License
 
-📜 License
 This project is open-source and available under the MIT License.
 
-🎯 Contributing
+---
+
+## 🎯 Contributing
+
 Want to improve this project?
 
-Fork the repository
+1️⃣ Fork the repository\
+2️⃣ Create a new branch\
+3️⃣ Make your changes\
+4️⃣ Submit a pull request
 
-Create a new branch
+🙌 **Happy Coding! 🚀**
 
-Make your changes
-
-Submit a pull request
-
-🙌 Happy Coding! 🚀
