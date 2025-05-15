@@ -2,8 +2,9 @@ import express from 'express'
 import mongoose from 'mongoose'
 import { User } from './models/User.js'
 import ejs from 'ejs'
-import { GetToken } from './Aurthentication/Token.js'//generate a token and verify it ex='asf521'
-const bcrypt = require('bcrypt');
+import bcrypt from 'bcrypt'
+
+
 const saltRounds = 10;
 const app = express()
 app.set('view engine', 'ejs');
@@ -15,12 +16,12 @@ app.use(express.static('views'))
 
 app.post('/singin/user', async (req, res) => {
   let data = req.body
-  console.log(data)
+  
   const user_name = data.userName
   const email = data.email
   const password = data.password
   try {
-    console.log("in try")
+  
     const FindUserData = await User.findOne({ userName: user_name, user_email: email })
     if (FindUserData) {
       console.log("User already exists");
@@ -30,14 +31,14 @@ app.post('/singin/user', async (req, res) => {
     else {
       bcrypt.genSalt(saltRounds, async function (err, salt) {
         const verify = new User({ userName: user_name, user_email: email, password: password });
-        
+
         bcrypt.hash(verify.password, salt, async function (err, hash) {
           console.log("verify");
-          console.log(verify.password)
-          verify.password=hash
-        await verify.save()
-        console.log("user added")
-        res.json({ success: true, message: "Singin successful" })
+         
+          verify.password = hash
+          await verify.save()
+          console.log("user added")
+          res.json({ success: true, message: "Singin successful" })
 
           // Store hash in your password DB.
         });
@@ -57,19 +58,29 @@ app.post('/singin/user', async (req, res) => {
 })
 app.post('/login/user', async (req, res) => {
   let data = req.body
-  console.log(data)
-
-  let verify = await User.findOne({ user_email: data.User_Name_Email, password: data.password })
+ 
 
   try {
-    if (verify) {
+    let verify = await User.findOne({ user_email: data.User_Name_Email })
+    
+     if (!verify) {
+    return res.status(400).json({ success: false, message: "User not found" });
+  }
+     let isMatch=await bcrypt.compare(data.password, verify.password)
+
+      if(isMatch){
       console.log("user found")
       res.json({ success: true, message: "Login successful" })
-    }
-    else {
-      console.log("else")
-      return res.status(400).json({ success: false, message: "User not found" });
-    }
+      return}
+      else{
+        
+    return res.status(401).json({ success: false, message: "Incorrect password" });
+
+      }
+   
+
+    
+
   }
   catch (err) {
     console.error(err)
