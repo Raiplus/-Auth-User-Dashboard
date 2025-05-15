@@ -7,11 +7,12 @@ This project includes **user registration, login, token-based authentication, an
 
 ## ✨ Features  
 ✅ User Sign-up & Login  
+✅ Secure Password Hashing with bcrypt  
 ✅ Token-based Authentication  
 ✅ User Dashboard  
 ✅ MongoDB Database Integration  
 ✅ Error Handling & Validation  
-✅ Deployed on Render  
+✅ Deployed on github
 
 ---
 
