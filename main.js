@@ -3,6 +3,13 @@ import mongoose from 'mongoose'
 import { User } from './models/User.js'
 import ejs from 'ejs'
 import bcrypt from 'bcrypt'
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+
+
 
 
 const saltRounds = 10;
@@ -10,7 +17,15 @@ const app = express()
 app.set('view engine', 'ejs');
 app.use(express.json())
 const port = 3000
-await mongoose.connect('mongodb://localhost:27017/')//any port which is used by MongoDB
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => {
+  console.log("Connected to MongoDB Atlas");
+}).catch((err) => {
+  console.error("MongoDB connection error:", err);
+});
+
 app.use(express.static('views'))
 //routes
 
