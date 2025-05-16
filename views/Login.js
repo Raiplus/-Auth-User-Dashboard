@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         try {
             console.log("i am in try ")
-            const response = await fetch('http://localhost:3000/login/user', {
+            const response = await fetch('/login/user', {
                 method: 'POST',
                 headers: {
 
