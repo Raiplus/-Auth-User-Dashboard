@@ -12,7 +12,14 @@ This project includes **user registration, login, token-based authentication, an
 ✅ User Dashboard  
 ✅ MongoDB Database Integration  
 ✅ Error Handling & Validation  
-✅ Deployed on github
+✅ Deployed on Render
+## 🌐 Live Demo / Showcase
+
+Check out the live version of this project here:  
+[Auth-User-Dashboard Live](https://auth-user-dashboard.onrender.com)
+
+Feel free to explore the signup, login, and dashboard features in action!
+
 
 ---
 
@@ -80,7 +87,32 @@ http://localhost:3000
 ├── main.js                 # Main Backend File  
 ├── package.json            # Project Configuration  
 ├── README.md               # Project Documentation  
+
 ```
+
+## ☁️ Deployment on Render
+
+### 1️⃣ Connect GitHub repo
+
+- Go to [Render](https://render.com) and create a new **Web Service**.  
+- Connect your GitHub repository (`Raiplus/Auth-User-Dashboard`).
+
+### 2️⃣ Configure build and start commands
+
+- **Build Command:** `npm install`  
+- **Start Command:** `npm start`
+
+### 3️⃣ Set environment variables
+
+- Add `MONGO_URI` with your MongoDB connection string.  
+- Add `PORT` (optional, Render assigns automatically if omitted).
+
+### 4️⃣ Deploy
+
+- Click **Create Web Service**.  
+- Render will build and deploy your app.  
+- Your app will be live on the provided Render URL.
+
 
 ## 📜 License
 
