@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     throw new Error("User already exists");
                   } else {
                     console.log("Verified! Redirecting...");
-                    window.location.href = "http://localhost:3000/UserDashbord";
+                    window.location.href = "/UserDashbord";
                   }
                   
 

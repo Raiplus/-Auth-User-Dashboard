@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             else{
                 console.log("dashbord")
-                window.location.href="http://localhost:3000/UserDashbord"
+                window.location.href="/UserDashbord"
             }
 
         }
